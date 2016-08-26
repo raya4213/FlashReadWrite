@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATxmega128A3U</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>FlashReadWrite</AssemblyName>
+    <Name>FlashReadWrite</Name>
+    <RootNamespace>FlashReadWrite</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.31.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool>com.atmel.avrdbg.tool.atmelice</avrtool>
+    <avrtoolserialnumber>J41800024439</avrtoolserialnumber>
+    <avrdeviceexpectedsignature>0x1E9742</avrdeviceexpectedsignature>
+    <com_atmel_avrdbg_tool_atmelice>
+      <ToolOptions>
+        <InterfaceProperties>
+          <PdiClock>4000000</PdiClock>
+        </InterfaceProperties>
+        <InterfaceName>PDI</InterfaceName>
+      </ToolOptions>
+      <ToolType>com.atmel.avrdbg.tool.atmelice</ToolType>
+      <ToolNumber>J41800024439</ToolNumber>
+      <ToolName>Atmel-ICE</ToolName>
+    </com_atmel_avrdbg_tool_atmelice>
+    <avrtoolinterface>PDI</avrtoolinterface>
+    <avrtoolinterfaceclock>4000000</avrtoolinterfaceclock>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atxmega128a3u -B "%24(PackRepoDir)\atmel\XMEGAA_DFP\1.0.39\gcc\dev\atxmega128a3u"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAA_DFP\1.0.39\include</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAA_DFP\1.0.39\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.Device>-mmcu=atxmega128a3u -B "%24(PackRepoDir)\atmel\XMEGAA_DFP\1.0.39\gcc\dev\atxmega128a3u"</avrgcc.common.Device>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.directories.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAA_DFP\1.0.39\include</Value>
+            <Value>../../../../../GitHub/cu-droplet/droplet_code/include</Value>
+            <Value>../../../../../GitHub/cu-droplet/droplet_code/src</Value>
+            <Value>../../../../../GitHub/xboot</Value>
+          </ListValues>
+        </avrgcc.compiler.directories.IncludePaths>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.general.UseVprintfLibrary>True</avrgcc.linker.general.UseVprintfLibrary>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.linker.memorysettings.Flash>
+          <ListValues>
+            <Value>.BOOT = 0x010000</Value>
+            <Value>.bootloader=0x10F00</Value>
+          </ListValues>
+        </avrgcc.linker.memorysettings.Flash>
+        <avrgcc.linker.miscellaneous.LinkerFlags>-lprintf_flt</avrgcc.linker.miscellaneous.LinkerFlags>
+        <avrgcc.assembler.general.IncludePaths>
+          <ListValues>
+            <Value>%24(PackRepoDir)\atmel\XMEGAA_DFP\1.0.39\include</Value>
+          </ListValues>
+        </avrgcc.assembler.general.IncludePaths>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="include" />
+    <Folder Include="src" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\delay_x.h">
+      <SubType>compile</SubType>
+      <Link>include\delay_x.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\droplet_init.h">
+      <SubType>compile</SubType>
+      <Link>include\droplet_init.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\ecc.h">
+      <SubType>compile</SubType>
+      <Link>include\ecc.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\eeprom_driver.h">
+      <SubType>compile</SubType>
+      <Link>include\eeprom_driver.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\firefly_sync.h">
+      <SubType>compile</SubType>
+      <Link>include\firefly_sync.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\flash_api.h">
+      <SubType>compile</SubType>
+      <Link>include\flash_api.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\i2c.h">
+      <SubType>compile</SubType>
+      <Link>include\i2c.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\ir_comm.h">
+      <SubType>compile</SubType>
+      <Link>include\ir_comm.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\ir_led.h">
+      <SubType>compile</SubType>
+      <Link>include\ir_led.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\ir_sensor.h">
+      <SubType>compile</SubType>
+      <Link>include\ir_sensor.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\mic.h">
+      <SubType>compile</SubType>
+      <Link>include\mic.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\motor.h">
+      <SubType>compile</SubType>
+      <Link>include\motor.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\pc_comm.h">
+      <SubType>compile</SubType>
+      <Link>include\pc_comm.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\power.h">
+      <SubType>compile</SubType>
+      <Link>include\power.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\random.h">
+      <SubType>compile</SubType>
+      <Link>include\random.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\range_algs.h">
+      <SubType>compile</SubType>
+      <Link>include\range_algs.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\rgb_led.h">
+      <SubType>compile</SubType>
+      <Link>include\rgb_led.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\rgb_sensor.h">
+      <SubType>compile</SubType>
+      <Link>include\rgb_sensor.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\scheduler.h">
+      <SubType>compile</SubType>
+      <Link>include\scheduler.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\serial_handler.h">
+      <SubType>compile</SubType>
+      <Link>include\serial_handler.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\speaker.h">
+      <SubType>compile</SubType>
+      <Link>include\speaker.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\include\sp_driver.h">
+      <SubType>compile</SubType>
+      <Link>include\sp_driver.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\droplet_init.c">
+      <SubType>compile</SubType>
+      <Link>src\droplet_init.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\ecc.c">
+      <SubType>compile</SubType>
+      <Link>src\ecc.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\eeprom_driver.c">
+      <SubType>compile</SubType>
+      <Link>src\eeprom_driver.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\firefly_sync.c">
+      <SubType>compile</SubType>
+      <Link>src\firefly_sync.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\flash_api.c">
+      <SubType>compile</SubType>
+      <Link>src\flash_api.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\flash_api_asm.s">
+      <SubType>compile</SubType>
+      <Link>src\flash_api_asm.s</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\i2c.c">
+      <SubType>compile</SubType>
+      <Link>src\i2c.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\ir_comm.c">
+      <SubType>compile</SubType>
+      <Link>src\ir_comm.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\ir_led.c">
+      <SubType>compile</SubType>
+      <Link>src\ir_led.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\ir_sensor.c">
+      <SubType>compile</SubType>
+      <Link>src\ir_sensor.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\mic.c">
+      <SubType>compile</SubType>
+      <Link>src\mic.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\motor.c">
+      <SubType>compile</SubType>
+      <Link>src\motor.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\pc_comm.c">
+      <SubType>compile</SubType>
+      <Link>src\pc_comm.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\power.c">
+      <SubType>compile</SubType>
+      <Link>src\power.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\random.c">
+      <SubType>compile</SubType>
+      <Link>src\random.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\range_algs.c">
+      <SubType>compile</SubType>
+      <Link>src\range_algs.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\rgb_led.c">
+      <SubType>compile</SubType>
+      <Link>src\rgb_led.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\rgb_sensor.c">
+      <SubType>compile</SubType>
+      <Link>src\rgb_sensor.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\scheduler.c">
+      <SubType>compile</SubType>
+      <Link>src\scheduler.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\scheduler_asm.s">
+      <SubType>compile</SubType>
+      <Link>src\scheduler_asm.s</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\serial_handler.c">
+      <SubType>compile</SubType>
+      <Link>src\serial_handler.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\speaker.c">
+      <SubType>compile</SubType>
+      <Link>src\speaker.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\src\sp_driver.s">
+      <SubType>compile</SubType>
+      <Link>src\sp_driver.s</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\user_template.c">
+      <SubType>compile</SubType>
+      <Link>user_template.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\cu-droplet\droplet_code\user_template.h">
+      <SubType>compile</SubType>
+      <Link>user_template.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\xboot\protocol.h">
+      <SubType>compile</SubType>
+      <Link>include\protocol.h</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\xboot\xboot.c">
+      <SubType>compile</SubType>
+      <Link>src\xboot.c</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\github\xboot\xbootapi.c">
+      <SubType>compile</SubType>
+      <Link>src\xbootapi.c</Link>
+    </Compile>
+    <Compile Include="include\xboot.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="include\xbootapi.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
